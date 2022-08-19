@@ -1,0 +1,142 @@
+:root {
+    --theme-green: #596D48;
+    --theme-background: #E5E7EB;
+    --theme-white: #fff;
+}
+
+@font-face {
+    font-family: Norse-Bold;
+    src: url("../fonts/Norse-Bold.otf");
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+    height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    color: var(--theme-green);
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    height: 100%;
+}
+
+.left-section {
+    grid-column: span 1;
+    background: url(../images/signup-background.jpg) no-repeat;
+    background-size: cover;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #00000080;
+    padding: 20px 10px;
+    margin-top: 40%;
+}
+
+.logo-image {
+    width: 100px;
+}
+
+.logo-text {
+    color: var(--theme-white);
+    font-family: Norse-Bold;
+    font-size: 100px;
+    margin: 20px 0px;
+}
+
+.right-section {
+    grid-column: span 2;
+    background: var(--theme-background);
+}
+
+.top-content {
+    padding: 50px;
+}
+
+.top-content-summary {
+    margin-top: 100px;
+}
+
+.center-content {    
+    padding: 30px 50px;
+    background: var(--theme-white);
+    box-shadow: 5px 2px 2px #ada8a8;
+}
+
+.input-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+label {
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+input {
+    border-radius: 5px;
+    border: 2px solid var(--theme-background);
+    padding: 10px;
+    width: 300px;
+    transition: all .2s ease-in-out;
+}
+
+input:focus {
+    outline: none;
+    border: 2px solid #398bee; 
+}
+
+.bottom-content {
+    padding: 30px 50px;
+}
+
+.create-btn {
+    border: none;
+    background-color: var(--theme-green);
+    color: var(--theme-white);
+    font-weight: bold;
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-size: 17px;
+}
+
+.account-text {
+    font-weight: bold;
+    font-size: 17px;
+}
+
+@media(max-width: 768px) {
+    .left-section {
+        display: none;
+    }
+
+    .right-section {
+        grid-column: span 3;
+    }
+
+    .input-container {
+        gap: 0px;
+    }
+
+    input {
+        width: 90%;
+    }
+}
